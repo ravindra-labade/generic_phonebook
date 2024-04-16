@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Page</title>
+</head>
+<body>
+        <ul>
+            {% for object in object_list %}
+            <li>{{ object.phone_no }}</li>
+            <li>{{ object.person_name }}</li>
+            <li>{{ object.person_city }}</li>
+            <li>{{ object.storage_mode }}</li>
+
+            <hr/>
+            {% empty %}
+            <li>No objects yet</li>
+            {% endfor %}
+        </ul>
+</body>
+</html>
